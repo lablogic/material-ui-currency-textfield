@@ -106,6 +106,7 @@ class CurrencyTextField extends React.Component {
       "size",
       "FormHelperTextProps",
       "placeholder",
+      "inputLabelProps",
     ].forEach(prop => (otherProps[prop] = this.props[prop]))
 
     return (
@@ -119,8 +120,8 @@ class CurrencyTextField extends React.Component {
         onKeyDown={e => this.callEventHandler(e, "onKeyDown")}
         InputProps={{
           startAdornment: (
-            <InputAdornment position="start">{currencySymbol}</InputAdornment>
-          ),
+            <InputAdornment position="start">{currencySymbol}$$$$</InputAdornment>
+          ),      
           ...InputProps,
         }}
         inputProps={{
